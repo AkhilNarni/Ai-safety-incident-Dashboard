@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.controls label {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+}
+
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.incident {
+    background: #fafafa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 6px solid #bbb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.incident:hover {
+    transform: translateY(-3px);
+}
+
+
+.incident.high { border-color: #dc3545; }
+.incident.medium { border-color: #ffc107; }
+.incident.low { border-color: #28a745; }
+
+.incident strong {
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.incident small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+
+.toggleDetails {
+    margin-top: 10px;
+    background: transparent;
+    color: #007bff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.toggleDetails:hover {
+    text-decoration: underline;
+}
+
+
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef2f7;
+    border-radius: 8px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+form button[type="submit"] {
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+}
